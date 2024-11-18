@@ -1,0 +1,579 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  /* width:100vw;
+    scroll-behavior: smooth;
+    overflow-x: hidden;  */
+  font-family: "Cormorant", sans-serif;
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  max-width: 90%;
+}
+
+/* header */
+.navbar {
+  box-shadow: 0px 4px 4px 0px #00000040;
+}
+
+.header-right-side {
+  border-bottom: 1px solid rgba(0, 0, 0, 43%);
+}
+
+.navbar h4 {
+  font-size: 14px;
+}
+
+.search-icon {
+  height: 18px;
+  width: 18px;
+}
+
+.dropdown-toggle::after {
+  display: none !important;
+}
+
+.navbar-nav .nav-link.active {
+  position: relative;
+}
+
+/* underline for nav links */
+.navbar-nav > .nav-item > .nav-link {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 5px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+/* Underline effect (::after) */
+.navbar-nav > .nav-item > .nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  transition: all 0.3s ease;
+}
+
+/* Expand underline on hover */
+.navbar-nav > .nav-item > .nav-link:hover::after {
+  width: 100%; /* Full width underline on hover */
+}
+/* hero banner */
+.hero-banner {
+  background-image: url("../images/herobanner.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 220px;
+  padding-bottom: 220px;
+}
+
+.hero-wrap h1 {
+  font-family: "Cormorant";
+  font-size: min(96px, 10vw);
+}
+
+/* best-sellers */
+.best-sellers {
+  padding: 60px 0;
+}
+
+.bestseller-text-wrap {
+  font-family: "Cormorant";
+}
+.furniture-collection-img{
+  width:100%;
+  max-width: 415px;
+  height:auto;
+}
+
+ /* Custom styling for slider */
+ .slick-slide img {
+  width: 100%;
+  border-radius: 8px;
+}
+.product-info {
+  text-align: center;
+  margin-top: 10px;
+}
+.right-slider-images{
+  max-width: 415px;
+  width: 100% !important;
+}
+.bestseller-text-wrap{
+  font-family:'Cormorant';
+  font-size: min(48px, 7vw);
+  line-height: 22px;
+}
+.slick-slide .slick-active .img{
+  transform:scale(1.5);
+}
+.best-sellers p{
+  font-size: min(14px,4vw);
+}
+/* furniture-type */
+.furniture-type {
+  padding: 60px 0px;
+}
+
+.furniture-wrap {
+  font-family: "Cormorant";
+}
+
+.cards {
+  padding: 40px;
+}
+
+.furniture-subheading {
+  position: relative;
+  display: inline-block;
+  /* Ensure the underline matches the text width */
+  padding-bottom: 5px;
+  /* Adjust spacing between text and underline */
+}
+
+.furniture-subheading::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60%;
+  /* Make the underline span the entire width of the text */
+  height: 2px;
+  /* Adjust thickness */
+  background-color: #fff;
+  /* Adjust color of the underline */
+}
+
+/* modern-furniture */
+.modern-furniture {
+  padding: 60px 0;
+}
+
+.grid-container {
+  display: grid;
+  column-gap: 40px;
+  row-gap: 50px;
+}
+
+.grid-8-columns {
+  grid-template-columns: 400px 400px 400px 400px;
+}
+
+.modern-furniture-wrap {
+  font-family: "Cormorant";
+  font-size: min(96px, 8vw);
+}
+
+.furniture-collection h5 {
+  font-family: "Cormorant";
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.hover-text {
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  color: white;
+  background-color: red;
+  padding: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.hover-options {
+  position: absolute;
+  top: 55%;
+  right: 10px;
+  /* transform: translateY(-50%); */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.image-container:hover .hover-options {
+  opacity: 1;
+}
+
+.hover-btn {
+  background-color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hover-btn img {
+  width: 60%;
+  height: auto;
+}
+
+.hover-btn:hover {
+  background-color: red;
+}
+
+.btn {
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #fff !important;
+  color: #000 !important;
+  border: 1px solid #000;
+}
+
+.image-container:hover .hover-text {
+  opacity: 1;
+  /* Show text on hover */
+}
+
+/* our-blog */
+.our-blog {
+  padding: 60px 0;
+}
+
+.our-blog-text-wrap {
+  font-family: "Cormorant";
+}
+
+.blog-container h3 {
+  font-family: "Cormorant";
+}
+
+/* wood-section */
+.wood-section {
+  padding: 60px 0;
+}
+
+.wood {
+  background-image: url("../images/wood-img.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.wood-text-wrap {
+  padding: 18%;
+  font-family: "Coromant";
+  color: #a8a8a8;
+  font-size: min(200px, 12vw);
+}
+
+/* outdoor furniture start */
+.thumbnail {
+  width: 100%;
+  max-width: 190px;
+  height: auto;
+}
+.content {
+  display: none;
+}
+.big-image {
+  width: 100%;
+  height: auto;
+  max-width: 575px;
+}
+.content.active {
+  display: block;
+}
+.content h2 {
+  font-family: "Cormorant";
+  font-size: min(64px, 4vw);
+}
+.content p {
+  font-size: min(16px, 2vw);
+}
+.content button:hover {
+  background-color: #fff !important;
+  color: #000 !important;
+  border: 1px solid black !important;
+}
+
+/* shop-category */
+.shop-category {
+  padding: 60px 0;
+}
+
+.shop-category-wrap {
+  font-family: "Cormorant";
+  padding: 100px 0;
+}
+
+.slick-dots {
+  bottom: -5.5em !important;
+}
+
+.slick-dots li button {
+  height: 0px !important;
+  width: 0px !important;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+
+.slick-dots li button::before {
+  content: "" !important;
+}
+
+.slider1 .slick-dots .slick-active button {
+  background: #000;
+}
+
+/* newsletter section */
+.newsletter {
+  background-image: url("../images/modern-minimalist-interior.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 7%;
+  padding-bottom: 9%;
+}
+
+.newsletter-wrap h6 {
+  font-family: "Cormorant";
+  font-size: 14px;
+  line-height: 17.07px;
+}
+
+.newsletter-form-control {
+  width: 100%;
+  max-width: 600px;
+  height: 55px;
+}
+
+.newsletter-form-control {
+  border-radius: 0px !important;
+}
+
+#button-addon2 {
+  height: 55px;
+  width: 100%;
+  max-width: 166px;
+  font-family: "Cormorant";
+  border-radius: 0px !important;
+}
+
+/* footer  */
+.footer {
+  padding: 60px 0 0 0;
+  font-family: "Cormorant";
+  box-shadow: 0px 0px 4px 0px #00000040;
+}
+
+.footer-end-text {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+}
+.footer li {
+  font-family: "Montserrat";
+}
+.bestsellers-slider .slick-slide {
+  opacity: 0.7;
+  transition: all 0.5s ease;
+}
+
+.bestsellers-slider .slick-center {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+/* media querie  */
+@media (max-width: 576px) {
+  .welcome-text {
+    font-size: 12px !important;
+  }
+
+  .social-media-icon {
+    height: 15px;
+  }
+
+  .hero-banner {
+    padding-top: 95px !important;
+    padding-bottom: 95px !important;
+  }
+  .content button {
+    font-size: 8px !important;
+  }
+  .thumbnail {
+    max-width: 85px !important;
+  }
+  .furniture-heading {
+    font-size: 0.9rem !important;
+  }
+
+  .furniture-subheading {
+    font-size: 1.05rem !important;
+  }
+
+  .furniture-wrap {
+    font-size: 24px !important;
+  }
+
+  .furniture-type p {
+    font-size: 13px !important;
+  }
+
+  .btn {
+    font-size: 13px !important;
+  }
+
+  .our-blog h6 {
+    font-size: 13px !important;
+  }
+
+  .our-blog h3 {
+    font-size: 20px !important;
+  }
+
+  .our-blog p {
+    font-size: 13px !important;
+  }
+
+  .newsletter-wrap p {
+    font-size: 14px;
+  }
+}
+@media (max-width: 767px) {
+  .best-sellers .left-image{
+    display:block;
+    margin: 0 auto;
+    width:40%;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 991px) {
+  .hero-banner {
+    padding-top: 115px !important;
+    padding-bottom: 115px !important;
+  }
+  .thumbnail {
+    max-width: 100px !important;
+  }
+
+  .newsletter-wrap p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 991px) {
+  section {
+    padding: 40px 0 !important;
+  }
+
+  .header-right-side {
+    max-width: 260px;
+    padding: 26px 0px 8px 15px !important;
+  }
+
+  .cart {
+    display: none;
+  }
+
+  .cards {
+    padding: 20px !important;
+  }
+
+  .circle-cards-collections h6 {
+    font-size: 16px !important;
+  }
+  .outdoor-furniture {
+    padding: 0px !important;
+  }
+  .shop-category-wrap {
+    padding: 30px 0 !important;
+  }
+
+  .our-blog h3 {
+    font-size: 24px !important;
+  }
+
+  .our-blog p {
+    font-size: 14px !important;
+  }
+
+  .newsletter-form-control {
+    height: 40px !important;
+    font-size: 13px;
+  }
+
+  #button-addon2 {
+    height: 40px !important;
+    max-width: 110px !important;
+  }
+
+  .footer h4 {
+    font-size: 18px;
+  }
+
+  .footer ul li {
+    font-size: 13px;
+  }
+
+  .footer-end-text {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1600px) {
+  .site-logo {
+    height: auto;
+    width: 60px;
+  }
+
+  .offcanvas-body ul {
+    gap: 3 !important;
+  }
+
+  .nav-link,
+  .form-control {
+    font-size: 12px;
+    padding: 0px !important;
+  }
+
+  form img {
+    height: 14px;
+    width: 14px;
+  }
+
+  .hero-banner {
+    padding-top: 125px !important;
+    padding-bottom: 125px !important;
+  }
+
+  .furniture-heading {
+    font-size: 0.95rem !important;
+  }
+
+  .furniture-subheading {
+    font-size: 1.15rem !important;
+  }
+
+  .shop-category-wrap {
+    padding: 50px 0 !important;
+  }
+}
+
+
+
